@@ -1,5 +1,5 @@
-package Task.Task;
-
+package Java.Service;
+import Java.models.Calculations;
 import java.util.*;
 
 import javax.persistence.*;

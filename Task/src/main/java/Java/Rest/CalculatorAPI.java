@@ -1,8 +1,9 @@
-package Task.Task;
+package Java.Rest;
 
 import java.util.*;
 import javax.ejb.*;
-
+import Java.models.Calculations;
+import Java.Service.*;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -23,14 +24,14 @@ public class CalculatorAPI extends Application{
     @Path("/calc")
     @POST
     public Response createCalculation(int num1, int num2, String operation) {
-    	
+
     Response.ResponseBuilder builder = null;
     Calculations calculation = new Calculations(num1,num2,operation);
     int result = calc.createCalculation(calculation);
-    
+
     if(result == Integer.MIN_VALUE)
     	return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity("the operation you sent doesn't exist").build();
-    
+
     builder = Response.ok("result = " + result);
     return builder.build();
     }

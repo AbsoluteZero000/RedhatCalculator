@@ -1,5 +1,4 @@
-package Task.Task;
-
+package Java.models;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
