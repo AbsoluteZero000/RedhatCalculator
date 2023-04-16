@@ -1,16 +1,15 @@
 package Java.Service;
 
-import javax.ws.rs.Path;
+import javax.ws.rs.*;
+import javax.ws.rs.core.Application;
 
-/**
- * Hello world!
- *
- */
-@Path("/api")
+
+@ApplicationPath("/api")
 public class App extends Application
 {
     public static void main( String[] args )
     {
 
     }
+
 }
