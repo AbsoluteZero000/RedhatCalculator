@@ -7,6 +7,7 @@ import Java.Service.*;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 
+
 @Stateless
 @Path("/")
 @Consumes(MediaType.APPLICATION_JSON)
@@ -16,10 +17,9 @@ public class CalculatorAPI extends Application{
 
     @Path("calc")
     @POST
-    public Response createCalculation(int num1, int num2, String operation) {
+    public Response createCalculation(Calculations calculation) {
 
     Response.ResponseBuilder builder = null;
-    Calculations calculation = new Calculations(num1,num2,operation);
     int result = calc.createCalculation(calculation);
 
     if(result == Integer.MIN_VALUE)
