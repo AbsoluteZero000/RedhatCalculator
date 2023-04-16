@@ -5,7 +5,7 @@ import javax.validation.constraints.*;
 @Entity
 public class Calculations {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
 	@NotNull
@@ -15,12 +15,17 @@ public class Calculations {
 	@NotNull
 	private String Operation;
 
-	public Calculations(int num1, int num2, String op) {
+	public Calculations(int num1, int num2, String operation){
 		Number1 = num1;
 		Number2 = num2;
-		Operation = op;
+		Operation = operation;
 	}
-
+	public Calculations()
+	{
+		Number1 = 0;
+		Number2 = 0;
+		Operation = "+";
+	}
 	public int getFirstArgument(){
 		return Number1;
 	}

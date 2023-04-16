@@ -8,8 +8,6 @@ public class CalculationService {
 
     @PersistenceContext
     private EntityManager em;
-    public CalculationService(){}
-
 
     public int createCalculation(Calculations calculation)
     {

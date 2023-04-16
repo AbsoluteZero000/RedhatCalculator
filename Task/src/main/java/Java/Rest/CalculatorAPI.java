@@ -10,13 +10,13 @@ import javax.ws.rs.core.*;
 
 @Stateless
 @Path("/")
-@Consumes(MediaType.APPLICATION_JSON)
-@Produces(MediaType.APPLICATION_JSON)
-public class CalculatorAPI extends Application{
+public class CalculatorAPI{
     CalculationService calc = new CalculationService();
 
     @Path("calc")
     @POST
+    @Consumes({"application/json"})
+    @Produces({"application/json"})
     public Response createCalculation(Calculations calculation) {
 
     Response.ResponseBuilder builder = null;
@@ -31,6 +31,7 @@ public class CalculatorAPI extends Application{
 
     @Path("calculations")
     @GET
+    @Produces({"application/json"})
     public List<Calculations> getCalculations(){
     	return calc.getCalculations();
     }
