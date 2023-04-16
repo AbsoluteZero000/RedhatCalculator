@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 M:\materials\Year-3_2\tools\assignment\RedhatCalculator\Task\src\main\java\Java\models\Calculations.java
 M:\materials\Year-3_2\tools\assignment\RedhatCalculator\Task\src\main\java\Java\Rest\CalculatorAPI.java
 M:\materials\Year-3_2\tools\assignment\RedhatCalculator\Task\src\main\java\Java\Service\CalculationService.java
 M:\materials\Year-3_2\tools\assignment\RedhatCalculator\Task\src\main\java\Java\Service\App.java
-=======
-/home/fares/Documents/GitHub/RedhatCalculator/Task/src/main/java/Java/Service/App.java
-/home/fares/Documents/GitHub/RedhatCalculator/Task/src/main/java/Java/Rest/CalculatorAPI.java
-/home/fares/Documents/GitHub/RedhatCalculator/Task/src/main/java/Java/models/Calculations.java
-/home/fares/Documents/GitHub/RedhatCalculator/Task/src/main/java/Java/Service/CalculationService.java
->>>>>>> 1f2825fba42ae127d0369468691eaefb64c30d6a

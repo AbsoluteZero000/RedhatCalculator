@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 Java\Service\App.class
 Java\Service\CalculationService.class
 Java\Rest\CalculatorAPI.class
 Java\models\Calculations.class
-=======
-Java/Service/CalculationService.class
-Java/Service/App.class
-Java/Rest/CalculatorAPI.class
-Java/models/Calculations.class
->>>>>>> 1f2825fba42ae127d0369468691eaefb64c30d6a

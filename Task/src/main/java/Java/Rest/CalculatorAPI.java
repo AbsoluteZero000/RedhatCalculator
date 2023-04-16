@@ -14,7 +14,7 @@ import javax.ws.rs.core.*;
 public class CalculatorAPI extends Application{
     CalculationService calc = new CalculationService();
 
-    @Path("/calc")
+    @Path("calc")
     @POST
     public Response createCalculation(int num1, int num2, String operation) {
 
@@ -29,7 +29,7 @@ public class CalculatorAPI extends Application{
     return builder.build();
     }
 
-    @Path("/calculations")
+    @Path("calculations")
     @GET
     public List<Calculations> getCalculations(){
     	return calc.getCalculations();
