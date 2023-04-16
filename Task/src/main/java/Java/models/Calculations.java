@@ -1,6 +1,5 @@
 package Java.models;
 import javax.persistence.*;
-import javax.validation.constraints.*;
 
 @Entity
 public class Calculations {
@@ -8,45 +7,37 @@ public class Calculations {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
-	@NotNull
 	private int Number1;
-	@NotNull
 	private int Number2;
-	@NotNull
 	private String Operation;
 
-	public Calculations(int num1, int num2, String operation){
-		Number1 = num1;
-		Number2 = num2;
-		Operation = operation;
+	public Calculations(int Number1, int Number2, String Operation){
+		this.Number1 = Number1;
+		this.Number2 = Number2;
+		this.Operation = Operation;
 	}
-	public Calculations()
-	{
-		Number1 = 0;
-		Number2 = 0;
-		Operation = "+";
-	}
+	public Calculations(){}
 	public int getFirstArgument(){
-		return Number1;
+		return this.Number1;
 	}
 
 	public int getSecondArgument(){
-		return Number2;
+		return this.Number2;
 	}
 
 	public String getOperation(){
-		return Operation;
+		return this.Operation;
 	}
 
-	public void setFirstArgument(int num1){
-		Number1 = num1;
+	public void setFirstArgument(int Number1){
+		this.Number1 = Number1;
 	}
 
-	public void setSecondArgument(int num2){
-		Number2 = num2;
+	public void setSecondArgument(int Number2){
+		this.Number2 = Number2;
 	}
 
-	public void setOperation(String op){
-		Operation = op;
+	public void setOperation(String Operation){
+		this.Operation = Operation;
 	}
 }
