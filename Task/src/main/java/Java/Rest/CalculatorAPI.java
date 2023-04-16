@@ -7,33 +7,26 @@ import Java.Service.*;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 
-
 @Stateless
 @Path("/")
-public class CalculatorAPI{
+public class CalculatorAPI {
     CalculationService calc = new CalculationService();
 
-    @Path("calc")
+    @Path("calc/{num1}/{num2}/{operation}")
     @POST
     @Consumes({"application/json"})
     @Produces({"application/json"})
-    public Response createCalculation(Calculations calculation) {
+    public String createCalculation(Calculations calculation) {
 
-    Response.ResponseBuilder builder = null;
-    int result = calc.createCalculation(calculation);
-
-    if(result == Integer.MIN_VALUE)
-    	return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity("the operation you sent doesn't exist").build();
-
-    builder = Response.ok("result = " + result);
-    return builder.build();
+        int result = calc.createCalculation(calculation);
+        return ("Result = " + result);
     }
 
     @Path("calculations")
     @GET
-    @Produces({"application/json"})
-    public List<Calculations> getCalculations(){
-    	return calc.getCalculations();
+    @Produces({ "application/json" })
+    public List<Calculations> getCalculations() {
+        return calc.getCalculations();
     }
 
 }
