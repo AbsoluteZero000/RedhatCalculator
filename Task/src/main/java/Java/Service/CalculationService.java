@@ -1,5 +1,5 @@
 package Java.Service;
-import Java.models.Calculations;
+import Java.Models.Calculations;
 import java.util.*;
 
 import javax.persistence.*;
@@ -9,27 +9,27 @@ public class CalculationService {
     @PersistenceContext
     private EntityManager em;
 
-    public int createCalculation(Calculations calculation)
+    public float createCalculation(Calculations calculation) throws Exception
     {
-        int result = 0;
+        float result = 0;
 
         if (calculation.getOperation().equals("+")){
-            result = calculation.getFirstArgument() + calculation.getSecondArgument();
+            result = calculation.getNumber1() + calculation.getNumber2();
         }
         else if(calculation.getOperation().equals("-")){
-            result = calculation.getFirstArgument() - calculation.getSecondArgument();
+            result = calculation.getNumber1() - calculation.getNumber2();
         }
         else if(calculation.getOperation().equals("*")){
-            result = calculation.getFirstArgument() * calculation.getSecondArgument();
+            result = calculation.getNumber1() * calculation.getNumber2();
         }
         else if(calculation.getOperation().equals("/")){
-            result = calculation.getFirstArgument() / calculation.getSecondArgument();
+            result = calculation.getNumber1() / calculation.getNumber2();
         }
         else{
-            return Integer.MIN_VALUE;
+            throw new IllegalArgumentException("Failed Operation");
         }
 
-        em.persist(calculation);
+        //em.persist(calculation);
         return result;
     }
 

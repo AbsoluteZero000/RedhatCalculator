@@ -2,29 +2,38 @@ package Java.Rest;
 
 import java.util.*;
 import javax.ejb.*;
-import Java.models.Calculations;
+
+import Java.Models.Calculations;
 import Java.Service.*;
 import javax.ws.rs.*;
-import javax.ws.rs.core.*;
+import javax.ws.rs.core.MediaType;
 
 @Stateless
+@Consumes(MediaType.APPLICATION_JSON)
+@Produces(MediaType.APPLICATION_JSON)
 @Path("/")
 public class CalculatorAPI {
+	
     CalculationService calc = new CalculationService();
 
-    @Path("calc/{num1}/{num2}/{operation}")
+    @Path("calc")
     @POST
-    @Consumes({"application/json"})
-    @Produces({"application/json"})
-    public String createCalculation(Calculations calculation) {
+    public String createCalculation(Calculations calculation) throws Exception {
 
-        int result = calc.createCalculation(calculation);
+    	float result = 0;
+    	try
+    	{
+    		result = calc.createCalculation(calculation);
+    	}
+    	catch (Exception e)
+    	{
+    		return (e.getMessage());
+    	}
         return ("Result = " + result);
     }
 
     @Path("calculations")
     @GET
-    @Produces({ "application/json" })
     public List<Calculations> getCalculations() {
         return calc.getCalculations();
     }

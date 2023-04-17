@@ -1,0 +1,15 @@
+# Created by buildmetadata-maven-plugin 1.7.0 ( SHA: 6f444cae ) 
+build.scmRevision.id=31d074992c0d64b84414135f8148b19e264496eb
+build.scmRevision.url=scm\:git\:git@github.com\:jboss/jboss-parent-pom.git/task
+build.maven.version=3.8.7
+build.version=1.0
+build.scmRevision.date=16.04.2023
+build.java.vm=OpenJDK 64-Bit Server VM
+build.version.full=1.0r31d074992c0d64b84414135f8148b19e264496eb
+build.java.compiler=HotSpot 64-Bit Tiered Compilers
+build.maven.execution.cmdline=/home/fares/Downloads/eclipse-jee-2023-03-R-linux-gtk-x86_64/eclipse//plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar -os linux -ws gtk -arch x86_64 -showsplash /home/fares/Downloads/eclipse-jee-2023-03-R-linux-gtk-x86_64/eclipse//plugins/org.eclipse.epp.package.common_4.27.0.20230309-1200/splash.bmp -launcher /home/fares/Downloads/eclipse-jee-2023-03-R-linux-gtk-x86_64/eclipse/eclipse -name Eclipse --launcher.library /home/fares/Downloads/eclipse-jee-2023-03-R-linux-gtk-x86_64/eclipse//plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.2.700.v20221108-1024/eclipse_11801.so -startup /home/fares/Downloads/eclipse-jee-2023-03-R-linux-gtk-x86_64/eclipse//plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar --launcher.appendVmargs -exitdata 2800b -product org.eclipse.epp.package.jee.product -vm /home/fares/Downloads/eclipse-jee-2023-03-R-linux-gtk-x86_64/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_17.0.6.v20230204-1729/jre/bin/java -vmargs -Dosgi.requiredJavaVersion\=17 -Dosgi.instance.area.default\=@user.home/eclipse-workspace -Dosgi.dataAreaRequiresExplicitInit\=true -Dorg.eclipse.swt.graphics.Resource.reportNonDisposed\=true -Dsun.java.command\=Eclipse -Xms256m -Xmx2048m -XX\:+UseG1GC -XX\:+UseStringDeduplication --add-modules\=ALL-SYSTEM --add-opens\=java.base/java.io\=ALL-UNNAMED --add-opens\=java.base/sun.nio.ch\=ALL-UNNAMED --add-opens\=java.base/java.net\=ALL-UNNAMED --add-opens\=java.base/sun.security.ssl\=ALL-UNNAMED --add-opens\=java.base/java.security\=ALL-UNNAMED --add-opens\=jdk.internal.jvmstat/sun.jvmstat.monitor\=ALL-UNNAMED -Dorg.eclipse.cdt.core.graceful_exit_time_ms\=60000 -jar /home/fares/Downloads/eclipse-jee-2023-03-R-linux-gtk-x86_64/eclipse//plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar
+build.groupId=task
+build.java.vendor=Eclipse Adoptium
+build.java.runtime.name=OpenJDK Runtime Environment
+build.java.runtime.version=17.0.6+10
+build.artifactId=task
