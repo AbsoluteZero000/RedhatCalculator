@@ -9,6 +9,8 @@ public class CalculationService {
     @PersistenceContext
     private EntityManager em;
 
+    public CalculationService(){}
+
     public float createCalculation(Calculations calculation) throws Exception
     {
         float result = 0;
@@ -36,7 +38,7 @@ public class CalculationService {
 
     public List<Calculations> getCalculations()
     {
-        TypedQuery<Calculations> query = em.createQuery("select * from Calculations", Calculations.class);
+        TypedQuery<Calculations> query = em.createQuery("select c from Calculations c", Calculations.class);
         return query.getResultList();
     }
 }

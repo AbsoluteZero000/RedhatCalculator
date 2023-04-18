@@ -1,4 +1,4 @@
-Java/Service/CalculationService.class
-Java/Service/App.class
-Java/Rest/CalculatorAPI.class
-Java/Models/Calculations.class
+Java\Service\App.class
+Java\Service\CalculationService.class
+Java\Models\Calculations.class
+Java\Rest\CalculatorAPI.class
