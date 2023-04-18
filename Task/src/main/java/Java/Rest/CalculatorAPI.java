@@ -3,7 +3,6 @@ package Java.Rest;
 import java.util.*;
 import javax.ejb.*;
 import javax.inject.Inject;
-
 import Java.Models.Calculations;
 import Java.Service.*;
 import javax.ws.rs.*;
@@ -23,6 +22,7 @@ public class CalculatorAPI {
     public String hey(){
         return "test";
     }
+    
     @Path("calc")
     @POST
     public String createCalculation(Calculations calculation) throws Exception {

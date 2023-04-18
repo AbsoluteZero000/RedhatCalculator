@@ -31,7 +31,7 @@ public class CalculationService {
             throw new IllegalArgumentException("Failed Operation");
         }
 
-        //em.persist(calculation);
+        em.persist(calculation);
         return result;
     }
 
