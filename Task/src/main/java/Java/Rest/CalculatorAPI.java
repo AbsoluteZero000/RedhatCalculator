@@ -19,13 +19,15 @@ public class CalculatorAPI {
     @GET
     @Path("test")
     public String hey() {
-        return "test";
+        return "Running";
     }
 
     @Path("calc")
     @POST
     public Object createCalculation(Calculations calculation) throws Exception {
-
+    	System.out.println(calculation.getNumber1());
+    	System.out.println(calculation.getNumber2());
+    	System.out.println(calculation.getOperation());
         Result result;
         try {
             result = calc.createCalculation(calculation);
