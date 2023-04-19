@@ -25,7 +25,7 @@ public class CalculationService {
         } else if (calculation.getOperation().equals("*")) {
             result = calculation.getNumber1() * calculation.getNumber2();
         } else if (calculation.getOperation().equals("/")) {
-            result = calculation.getNumber1() / calculation.getNumber2();
+            result = (double)calculation.getNumber1() / calculation.getNumber2();
         } else {
             throw new IllegalArgumentException("Failed Operation");
         }
