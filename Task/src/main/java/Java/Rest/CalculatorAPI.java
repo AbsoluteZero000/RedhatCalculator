@@ -16,27 +16,23 @@ public class CalculatorAPI {
     @Inject
     CalculationService calc = new CalculationService();
 
-
     @GET
     @Path("test")
-    public String hey(){
+    public String hey() {
         return "test";
     }
-    
+
     @Path("calc")
     @POST
-    public String createCalculation(Calculations calculation) throws Exception {
+    public Object createCalculation(Calculations calculation) throws Exception {
 
-    	float result = 0;
-    	try
-    	{
-    		result = calc.createCalculation(calculation);
-    	}
-    	catch (Exception e)
-    	{
-    		return (e.getMessage());
-    	}
-        return ("Result = " + result);
+        Result result;
+        try {
+            result = calc.createCalculation(calculation);
+        } catch (Exception e) {
+            return (e.getMessage());
+        }
+        return result;
     }
 
     @Path("calculations")
