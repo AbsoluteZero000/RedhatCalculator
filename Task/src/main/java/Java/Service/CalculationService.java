@@ -2,8 +2,10 @@ package Java.Service;
 import Java.Models.Calculations;
 import java.util.*;
 
+import javax.ejb.Stateless;
 import javax.persistence.*;
 
+@Stateless
 public class CalculationService {
 
     @PersistenceContext
