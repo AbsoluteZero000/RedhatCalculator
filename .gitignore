@@ -1,0 +1,6 @@
+Task/target/
+Task/.settings
+*.vscode
+Task/.project
+Task/.classpath
+Task/build.metadata
